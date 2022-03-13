@@ -6,59 +6,25 @@
     android:padding="16dp"
     android:orientation="vertical">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_intent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/panjang"/>
-
-    <EditText
-        android:id="@+id/edt_length"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:lines="1"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lebar"/>
-
-    <EditText
-        android:id="@+id/edt_width"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:lines="1"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tinggi"/>
-
-    <EditText
-        android:id="@+id/edt_height"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:lines="1"
-        android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:layout_marginBottom="16dp"
+        android:text="@string/intent"/>
 
     <Button
-        android:id="@+id/btn_calculate"
+        android:id="@+id/btn_intentdata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hitung"/>
+        android:layout_marginBottom="16dp"
+        android:text="@string/intentdata"/>
 
-    <TextView
-        android:id="@+id/tv_result"
+    <Button
+        android:id="@+id/btn_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/hasil"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:layout_marginBottom="16dp"
+        android:text="@string/intentimplicit"/>
 
 </LinearLayout>

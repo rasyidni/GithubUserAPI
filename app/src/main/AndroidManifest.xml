@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GithubUserAPI">
         <activity
+            android:name=".UI.Main.ActivityDua"
+            android:exported="false" />
+        <activity
             android:name=".UI.Main.MainActivity"
             android:exported="true">
             <intent-filter>
