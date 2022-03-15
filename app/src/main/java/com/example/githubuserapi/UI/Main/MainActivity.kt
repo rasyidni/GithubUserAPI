@@ -9,42 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.githubuserapi.R
 
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnMoveActivity: Button = findViewById(R.id.btn_intent)
-        btnMoveActivity.setOnClickListener(this)
-
-        val btnMoveWithDataActivity: Button = findViewById(R.id.btn_intentdata)
-        btnMoveWithDataActivity.setOnClickListener(this)
-
-        val btnDialPhone: Button = findViewById(R.id.btn_in)
-        btnDialPhone.setOnClickListener(this)
-    }
-
-    override fun onClick(v: View?){
-        when(v?.id) {
-            R.id.btn_intent -> {
-                val moveIntent = Intent(this@MainActivity, ActivityDua::class.java)
-                startActivity(moveIntent)
-            }
-
-            R.id.btn_intentdata -> {
-                val moveWithDataIntent = Intent(this@MainActivity, MoveWithDataActivity::class.java)
-                moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_NAME, "Dicoding Academy Boy")
-                moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_AGE, 5)
-                startActivity(moveWithDataIntent)
-            }
-
-            R.id.btn_in -> {
-                val phoneNumber = "089692808688"
-                val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
-                startActivity(dialPhoneIntent)
-            }
-        }
+        supportActionBar?.title = "Google Pixel"
     }
 
 }
