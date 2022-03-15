@@ -1,6 +1,7 @@
 package com.example.githubuserapi.UI.Main
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -16,6 +17,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnMoveActivity: Button = findViewById(R.id.btn_intent)
         btnMoveActivity.setOnClickListener(this)
+
+        val btnMoveWithDataActivity: Button = findViewById(R.id.btn_intentdata)
+        btnMoveWithDataActivity.setOnClickListener(this)
+
+        val btnDialPhone: Button = findViewById(R.id.btn_in)
+        btnDialPhone.setOnClickListener(this)
     }
 
     override fun onClick(v: View?){
@@ -23,6 +30,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_intent -> {
                 val moveIntent = Intent(this@MainActivity, ActivityDua::class.java)
                 startActivity(moveIntent)
+            }
+
+            R.id.btn_intentdata -> {
+                val moveWithDataIntent = Intent(this@MainActivity, MoveWithDataActivity::class.java)
+                moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_NAME, "Dicoding Academy Boy")
+                moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_AGE, 5)
+                startActivity(moveWithDataIntent)
+            }
+
+            R.id.btn_in -> {
+                val phoneNumber = "089692808688"
+                val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+                startActivity(dialPhoneIntent)
             }
         }
     }
